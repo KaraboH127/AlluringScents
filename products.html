@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Alluring Scents</title>
+  <meta name="description" content="Browse the full Alluring Scents collection of premium luxury perfumes.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" type="image/png" sizes="32x32" href="Assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Assets/images/favicon-180.png">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body class="page-products">
+
+<nav id="mainNav">
+  <a class="nav-brand" href="index.html">
+    <img class="brand-mark nav-brand-mark" src="Assets/images/Alluring_scents_logo.jpg" alt="Alluring Scents logo">
+    <span class="brand-copy">
+      <span class="nav-brand-name">Alluring <span>Scents</span></span>
+      <span class="nav-brand-tagline">Savour the Seduction</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html" class="active" aria-current="page">Products</a></li>
+    <li><a href="order.html">Order &amp; Delivery</a></li>
+  </ul>
+  <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20place%20an%20order%20with%20Alluring%20Scents." target="_blank" rel="noopener noreferrer" class="nav-wa">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.531 5.857L.058 23.528a.5.5 0 0 0 .602.602l5.671-1.473A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.93a9.904 9.904 0 0 1-5.031-1.374l-.361-.215-3.736.97.993-3.636-.236-.374A9.9 9.9 0 0 1 2.07 12C2.07 6.508 6.508 2.07 12 2.07c5.491 0 9.93 4.439 9.93 9.93 0 5.492-4.439 9.93-9.93 9.93z" fill-rule="evenodd"/></svg>
+    Order Now
+  </a>
+  <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="products.html" aria-current="page">Products</a>
+  <a href="order.html">Order &amp; Delivery</a>
+  <a href="https://wa.me/27671761716" target="_blank" rel="noopener noreferrer" class="mobile-wa-link">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.531 5.857L.058 23.528a.5.5 0 0 0 .602.602l5.671-1.473A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.93a9.904 9.904 0 0 1-5.031-1.374l-.361-.215-3.736.97.993-3.636-.236-.374A9.9 9.9 0 0 1 2.07 12C2.07 6.508 6.508 2.07 12 2.07c5.491 0 9.93 4.439 9.93 9.93 0 5.492-4.439 9.93-9.93 9.93z"/></svg>
+    <span>WhatsApp Us</span>
+  </a>
+</div>
+
+<div class="page-hero page-hero-products pt-nav">
+  <div class="container page-hero-inner">
+    <div class="page-hero-copy">
+      <span class="section-label">The Fragrance Wardrobe</span>
+      <h1>Perfumes for <em>every mood</em></h1>
+      <p>A clean, fashion-led collection of statement scents. Browse the edit, filter by style, and order directly when something feels like yours.</p>
+    </div>
+    <div class="page-hero-meta">
+      <div>
+        <span class="meta-label">Collection</span>
+        <strong>8 Signatures</strong>
+      </div>
+      <div>
+        <span class="meta-label">Format</span>
+        <strong>100ml EDP</strong>
+      </div>
+      <div>
+        <span class="meta-label">Ordering</span>
+        <strong>WhatsApp Direct</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="container">
+    <div class="filter-inner">
+      <span class="filter-label">Filter</span>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="male">Male</button>
+      <button class="filter-btn" data-filter="female">Female</button>
+      <button class="filter-btn" data-filter="unisex">Unisex</button>
+    </div>
+  </div>
+</div>
+
+<section class="products-section">
+  <div class="container">
+    <div class="count-bar">
+      <p class="count-text" aria-live="polite">Showing <strong>all 8</strong> fragrances</p>
+      <a href="https://wa.me/27671761716?text=Hi!%20I%20need%20help%20choosing%20a%20perfume." target="_blank" rel="noopener noreferrer" class="btn btn-green btn-sm">Need help choosing?</a>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <div class="product-card reveal" data-gender="female">
+        <div class="product-img-wrap bg-1">
+          <span class="feat-emoji"><img src="Assets/images/Avalanche.jpeg" alt="Avalanche" loading="lazy" decoding="async"></span>
+          <span class="product-badge badge-featured">Floral</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Avalanche</div>
+          <div class="product-gender">Female</div>
+          <div class="product-notes">
+            <div class="note-row"><span class="note-label">Top Notes</span><span class="note-val">Freesia, Gardenia and Cardamom</span></div>
+            <div class="note-row"><span class="note-label">Heart Notes</span><span class="note-val">Jasmine, Rose and Peach</span></div>
+            <div class="note-row"><span class="note-label">Base Notes</span><span class="note-val">Patchouli, Vetiver, Musks and Vanilla</span></div>
+            <div class="note-row"><span class="note-label">Mood</span><span class="note-val">Floral</span></div>
+          </div>
+          <div class="product-meta">
+            <div><div class="product-price">R 500</div><div class="product-size">100ml EDP</div></div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20order%20Avalanche." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-gender="female">
+        <div class="product-img-wrap bg-1">
+          <span class="feat-emoji"><img src="Assets/images/taboo.jpg" alt="Taboo" loading="lazy" decoding="async"></span>
+          <span class="product-badge badge-featured">Bold</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Taboo</div>
+          <div class="product-gender">Female</div>
+          <div class="product-notes">
+            <div class="note-row"><span class="note-label">Top Notes</span><span class="note-val">Jasmine</span></div>
+            <div class="note-row"><span class="note-label">Heart Notes</span><span class="note-val">Caramel and Salt</span></div>
+            <div class="note-row"><span class="note-label">Base Notes</span><span class="note-val">Vanilla</span></div>
+            <div class="note-row"><span class="note-label">Mood</span><span class="note-val">Naughty</span></div>
+          </div>
+          <div class="product-meta">
+            <div><div class="product-price">R 500</div><div class="product-size">100ml EDP</div></div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20order%20Taboo." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-gender="male">
+        <div class="product-img-wrap bg-1">
+          <span class="feat-emoji"><img src="Assets/images/Fuego.jpg" alt="Fuego" loading="lazy" decoding="async"></span>
+          <span class="product-badge badge-featured">Smoky</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Fuego</div>
+          <div class="product-gender">Male</div>
+          <div class="product-notes">
+            <div class="note-row"><span class="note-label">Top Notes</span><span class="note-val">Nutmeg, Elderflower, Lavender and Lemon</span></div>
+            <div class="note-row"><span class="note-label">Heart Notes</span><span class="note-val">Violet, Cedar and Valley Lily</span></div>
+            <div class="note-row"><span class="note-label">Base Notes</span><span class="note-val">Leather, Vetiver, Musk and Tonka Bean</span></div>
+            <div class="note-row"><span class="note-label">Mood</span><span class="note-val">Seductive</span></div>
+          </div>
+          <div class="product-meta">
+            <div><div class="product-price">R 500</div><div class="product-size">100ml EDP</div></div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20order%20Fuego." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-gender="male">
+        <div class="product-img-wrap bg-1">
+          <span class="feat-emoji"><img src="Assets/images/Mahogany.jpg" alt="Mahogany" loading="lazy" decoding="async"></span>
+          <span class="product-badge badge-featured">Warm woods</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Mahogany</div>
+          <div class="product-gender">Male</div>
+          <div class="product-notes">
+            <div class="note-row"><span class="note-label">Top Notes</span><span class="note-val">Exotic Rosewood</span></div>
+            <div class="note-row"><span class="note-label">Heart Notes</span><span class="note-val">Cardamom, Sandalwood and Vetiver</span></div>
+            <div class="note-row"><span class="note-label">Base Notes</span><span class="note-val">Tonka Bean and Amber</span></div>
+            <div class="note-row"><span class="note-label">Mood</span><span class="note-val">Decadent</span></div>
+          </div>
+          <div class="product-meta">
+            <div><div class="product-price">R 500</div><div class="product-size">100ml EDP</div></div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20order%20Mahogany." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-gender="unisex">
+        <div class="product-img-wrap bg-1">
+          <span class="feat-emoji"><img src="Assets/images/Azure.jpg" alt="Azure" loading="lazy" decoding="async"></span>
+          <span class="product-badge badge-featured">Fresh</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Azure</div>
+          <div class="product-gender">Unisex</div>
+          <div class="product-notes">
+            <div class="note-row"><span class="note-label">Top Notes</span><span class="note-val">Sicilian Lemon, Apple, Cedar and Bellflower</span></div>
+            <div class="note-row"><span class="note-label">Heart Notes</span><span class="note-val">Bamboo, Jasmine and White Rose</span></div>
+            <div class="note-row"><span class="note-label">Base Notes</span><span class="note-val">Cedar, Musk and Amber</span></div>
+            <div class="note-row"><span class="note-label">Mood</span><span class="note-val">Invigorating</span></div>
+          </div>
+          <div class="product-meta">
+            <div><div class="product-price">R 500</div><div class="product-size">100ml EDP</div></div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20order%20Azure." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-gender="male">
+        <div class="product-img-wrap bg-1">
+          <span class="feat-emoji"><img src="Assets/images/Kairos.jpg" alt="Kairos" loading="lazy" decoding="async"></span>
+          <span class="product-badge badge-featured">Leather</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Kairos</div>
+          <div class="product-gender">Male</div>
+          <div class="product-notes">
+            <div class="note-row"><span class="note-label">Top Notes</span><span class="note-val">Tuscan Iris and Italian Orange</span></div>
+            <div class="note-row"><span class="note-label">Heart Notes</span><span class="note-val">Leather and Rose</span></div>
+            <div class="note-row"><span class="note-label">Base Notes</span><span class="note-val">Sandalwood, Ambrette, Agarwood and Cedarwood</span></div>
+            <div class="note-row"><span class="note-label">Mood</span><span class="note-val">Sophisticated</span></div>
+          </div>
+          <div class="product-meta">
+            <div><div class="product-price">R 500</div><div class="product-size">100ml EDP</div></div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20order%20Kairos." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-gender="female">
+        <div class="product-img-wrap bg-1">
+          <span class="feat-emoji"><img src="Assets/images/Cinque.jpg" alt="Cinque" loading="lazy" decoding="async"></span>
+          <span class="product-badge badge-featured">Classic</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Cinque</div>
+          <div class="product-gender">Female</div>
+          <div class="product-notes">
+            <div class="note-row"><span class="note-label">Top Notes</span><span class="note-val">Aldehydes, Ylang-Ylang, Bergamot and Lemon</span></div>
+            <div class="note-row"><span class="note-label">Heart Notes</span><span class="note-val">Iris, Jasmine, Rose and Valley Lily</span></div>
+            <div class="note-row"><span class="note-label">Base Notes</span><span class="note-val">Civet, Sandalwood, Amber, Musk, Vanilla and Patchouli</span></div>
+            <div class="note-row"><span class="note-label">Mood</span><span class="note-val">Luxurious</span></div>
+          </div>
+          <div class="product-meta">
+            <div><div class="product-price">R 500</div><div class="product-size">100ml EDP</div></div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20order%20Cinque." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card reveal" data-gender="male">
+        <div class="product-img-wrap bg-1">
+          <span class="feat-emoji"><img src="Assets/images/elusive.jpg" alt="Elusive" loading="lazy" decoding="async"></span>
+          <span class="product-badge badge-featured">Amber</span>
+        </div>
+        <div class="product-body">
+          <div class="product-name">Elusive</div>
+          <div class="product-gender">Male</div>
+          <div class="product-notes">
+            <div class="note-row"><span class="note-label">Top Notes</span><span class="note-val">Warm Spicy and Cardamom</span></div>
+            <div class="note-row"><span class="note-label">Heart Notes</span><span class="note-val">Oriental Citrus and Caramel</span></div>
+            <div class="note-row"><span class="note-label">Base Notes</span><span class="note-val">Woody and Amber</span></div>
+            <div class="note-row"><span class="note-label">Mood</span><span class="note-val">Addictive</span></div>
+          </div>
+          <div class="product-meta">
+            <div><div class="product-price">R 500</div><div class="product-size">100ml EDP</div></div>
+          </div>
+        </div>
+        <div class="product-footer">
+          <a href="https://wa.me/27671761716?text=Hi!%20I'd%20like%20to%20order%20Elusive." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm btn-block">Order on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img class="brand-mark footer-brand-mark" src="Assets/images/Alluring_scents_logo.jpg" alt="Alluring Scents logo">
+          <div class="footer-brand-copy">
+            <div class="footer-brand-name">Alluring <span>Scents</span></div>
+            <div class="footer-tagline">Savour the Seduction</div>
+          </div>
+        </div>
+        <p class="footer-desc">Premium fragrances curated with intent and delivered across South Africa since 2024.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="order.html">Order &amp; Delivery</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <a href="https://wa.me/27671761716" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.531 5.857L.058 23.528a.5.5 0 0 0 .602.602l5.671-1.473A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.93a9.904 9.904 0 0 1-5.031-1.374l-.361-.215-3.736.97.993-3.636-.236-.374A9.9 9.9 0 0 1 2.07 12C2.07 6.508 6.508 2.07 12 2.07c5.491 0 9.93 4.439 9.93 9.93 0 5.492-4.439 9.93-9.93 9.93z"/></svg>
+          <span>WhatsApp Us</span>
+        </a>
+        <a href="https://www.instagram.com/_alluringscents_/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.756 5.756 0 0 1 22 7.75v8.5A5.756 5.756 0 0 1 16.25 22h-8.5A5.756 5.756 0 0 1 2 16.25v-8.5A5.756 5.756 0 0 1 7.75 2zm0 1.8A3.954 3.954 0 0 0 3.8 7.75v8.5a3.954 3.954 0 0 0 3.95 3.95h8.5a3.954 3.954 0 0 0 3.95-3.95v-8.5a3.954 3.954 0 0 0-3.95-3.95h-8.5zm8.975 1.35a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25zM12 6.65A5.35 5.35 0 1 1 6.65 12 5.356 5.356 0 0 1 12 6.65zm0 1.8A3.55 3.55 0 1 0 15.55 12 3.554 3.554 0 0 0 12 8.45z"/></svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Alluring Scents. All rights reserved.</span>
+      <span class="footer-founders">Founded by Thato Padi and Katlego Kennedy</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/27671761716" target="_blank" class="wa-fab" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.122 1.531 5.857L.058 23.528a.5.5 0 0 0 .602.602l5.671-1.473A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.93a9.904 9.904 0 0 1-5.031-1.374l-.361-.215-3.736.97.993-3.636-.236-.374A9.9 9.9 0 0 1 2.07 12C2.07 6.508 6.508 2.07 12 2.07c5.491 0 9.93 4.439 9.93 9.93 0 5.492-4.439 9.93-9.93 9.93z"/></svg>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>
