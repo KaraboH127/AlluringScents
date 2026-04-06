@@ -60,13 +60,51 @@ function initHeroVideo() {
     }
   };
 
+  const attemptPlay = () => {
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+    heroVideo.setAttribute('muted', '');
+    heroVideo.setAttribute('playsinline', '');
+    heroVideo.setAttribute('webkit-playsinline', '');
+
+    const playPromise = heroVideo.play();
+    if (playPromise && typeof playPromise.then === 'function') {
+      playPromise.then(markVideoReady).catch(() => {});
+    }
+  };
+
   if (heroVideo.readyState >= 2) {
     markVideoReady();
-    return;
+    attemptPlay();
+  } else {
+    heroVideo.addEventListener('loadeddata', markVideoReady, { once: true });
+    heroVideo.addEventListener('canplay', markVideoReady, { once: true });
   }
 
-  heroVideo.addEventListener('loadeddata', markVideoReady, { once: true });
-  heroVideo.addEventListener('canplay', markVideoReady, { once: true });
+  heroVideo.addEventListener('loadedmetadata', attemptPlay, { once: true });
+  heroVideo.addEventListener('canplay', attemptPlay);
+  heroVideo.addEventListener('pause', () => {
+    if (!document.hidden) {
+      attemptPlay();
+    }
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+      attemptPlay();
+    }
+  });
+
+  window.addEventListener('focus', attemptPlay);
+  window.addEventListener('pageshow', attemptPlay);
+  window.addEventListener('resize', attemptPlay, { passive: true });
+
+  ['touchstart', 'pointerdown'].forEach((eventName) => {
+    document.addEventListener(eventName, attemptPlay, { once: true, passive: true });
+  });
+
+  attemptPlay();
 }
 
 function initProductFilters() {
