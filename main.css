@@ -1870,7 +1870,7 @@ footer {
     padding: 0;
     gap: 6px;
     min-width: 0;
-    grid-template-rows: minmax(34px, auto) auto minmax(172px, 1fr) auto;
+    grid-template-rows: minmax(34px, auto) auto minmax(204px, 1fr) auto;
   }
 
   body.page-products .product-name,
@@ -1878,8 +1878,12 @@ footer {
     font-size: 12px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    display: block;
     white-space: normal;
     min-height: calc(1.2em * 2);
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
     overflow-wrap: anywhere;
   }
 
@@ -1896,13 +1900,15 @@ footer {
     display: grid;
     gap: 4px;
     margin-bottom: 0;
-    min-height: 172px;
+    grid-template-rows: repeat(4, minmax(48px, auto));
+    min-height: 204px;
   }
 
   body.page-products .note-row,
   body.page-home .featured .note-row {
     grid-template-columns: 1fr;
     gap: 2px;
+    min-height: 48px;
     padding-top: 4px;
   }
 
@@ -1917,7 +1923,11 @@ footer {
   body.page-home .featured .note-val {
     font-size: 10px;
     line-height: 1.35;
-    min-height: calc(1.35em * 2);
+    display: block;
+    min-height: auto;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
     overflow-wrap: anywhere;
   }
 
@@ -2081,7 +2091,7 @@ footer {
   body.page-products .product-body,
   body.page-home .featured .product-body {
     gap: 7px;
-    grid-template-rows: minmax(30px, auto) auto minmax(156px, 1fr) auto;
+    grid-template-rows: minmax(30px, auto) auto minmax(220px, 1fr) auto;
   }
 
   body.page-products .product-name,
@@ -2093,12 +2103,14 @@ footer {
   body.page-products .product-notes,
   body.page-home .featured .product-notes {
     gap: 5px;
-    min-height: 156px;
+    grid-template-rows: repeat(4, minmax(52px, auto));
+    min-height: 220px;
   }
 
   body.page-products .note-row,
   body.page-home .featured .note-row {
     gap: 3px;
+    min-height: 52px;
     padding-top: 3px;
   }
 
@@ -2253,7 +2265,7 @@ footer {
   body.page-products .note-val,
   body.page-home .featured .note-val {
     font-size: 9px;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: unset;
   }
 
   .wa-box-num {
@@ -2292,5 +2304,81 @@ footer {
   .footer-brand-mark {
     width: 48px;
     height: 48px;
+  }
+}
+
+@media (max-width: 380px) {
+  body.page-products .products-grid,
+  body.page-home .feat-grid {
+    gap: 16px 10px;
+  }
+
+  body.page-products .product-card,
+  body.page-home .featured .product-card {
+    gap: 7px;
+  }
+
+  body.page-products .product-img-wrap,
+  body.page-home .featured .product-img-wrap {
+    aspect-ratio: 0.8;
+  }
+
+  body.page-products .product-body,
+  body.page-home .featured .product-body {
+    gap: 6px;
+    grid-template-rows: minmax(28px, auto) auto minmax(192px, 1fr) auto;
+  }
+
+  body.page-products .product-name,
+  body.page-home .featured .product-name {
+    font-size: 10px;
+    line-height: 1.26;
+    min-height: calc(1.26em * 2);
+  }
+
+  body.page-products .product-gender,
+  body.page-home .featured .product-gender,
+  body.page-products .note-label,
+  body.page-home .featured .note-label {
+    font-size: 6px;
+    letter-spacing: 0.12em;
+  }
+
+  body.page-products .product-notes,
+  body.page-home .featured .product-notes {
+    gap: 4px;
+    grid-template-rows: repeat(4, minmax(45px, auto));
+    min-height: 192px;
+  }
+
+  body.page-products .note-row,
+  body.page-home .featured .note-row {
+    gap: 2px;
+    min-height: 45px;
+    padding-top: 3px;
+  }
+
+  body.page-products .note-val,
+  body.page-home .featured .note-val {
+    font-size: 8px;
+    line-height: 1.38;
+  }
+
+  body.page-products .product-price,
+  body.page-home .featured .product-price {
+    font-size: 11px;
+  }
+
+  body.page-products .product-size,
+  body.page-home .featured .product-size {
+    font-size: 7px;
+  }
+
+  body.page-products .product-footer .btn-whatsapp,
+  body.page-home .featured .product-footer .btn-whatsapp {
+    min-height: 36px;
+    padding: 7px 8px;
+    font-size: 6px;
+    letter-spacing: 0.08em;
   }
 }
