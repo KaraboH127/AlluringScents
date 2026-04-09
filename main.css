@@ -78,6 +78,7 @@ nav {
   height: 88px;
   padding: 0 44px;
   background: rgba(244, 240, 234, 0.9);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
   transition: background var(--transition), border-color var(--transition), height var(--transition), box-shadow var(--transition);
@@ -86,6 +87,7 @@ nav {
 body.page-home nav:not(.scrolled) {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.08) 74%, rgba(0, 0, 0, 0) 100%);
   border-bottom-color: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -281,6 +283,7 @@ body.page-home nav:not(.scrolled) .nav-wa {
   z-index: 8999;
   padding: 10px 28px 26px;
   background: rgba(244, 240, 234, 0.98);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
   transform: translateY(-10px);
@@ -675,6 +678,7 @@ section {
   padding: 22px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
 
@@ -838,6 +842,7 @@ section {
   padding: 22px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
 
@@ -1098,6 +1103,7 @@ section {
   min-height: calc(0.94em * 2);
   overflow: hidden;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
@@ -1143,6 +1149,7 @@ section {
   min-height: calc(1.7em * 2);
   overflow: hidden;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
@@ -1287,6 +1294,7 @@ section {
   top: 72px;
   z-index: 100;
   background: rgba(244, 240, 234, 0.92);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
 }
@@ -1883,6 +1891,7 @@ footer {
     min-height: calc(1.2em * 2);
     overflow: visible;
     -webkit-line-clamp: unset;
+    line-clamp: unset;
     -webkit-box-orient: initial;
     overflow-wrap: anywhere;
   }
@@ -1924,9 +1933,10 @@ footer {
     font-size: 10px;
     line-height: 1.35;
     display: block;
-    min-height: auto;
+    height: auto;
     overflow: visible;
     -webkit-line-clamp: unset;
+    line-clamp: unset;
     -webkit-box-orient: initial;
     overflow-wrap: anywhere;
   }
@@ -2029,7 +2039,7 @@ footer {
   }
 
   .hero {
-    min-height: auto;
+    height: auto;
     padding-top: 116px;
     padding-bottom: 24px;
   }
@@ -2266,6 +2276,7 @@ footer {
   body.page-home .featured .note-val {
     font-size: 9px;
     -webkit-line-clamp: unset;
+    line-clamp: unset;
   }
 
   .wa-box-num {
