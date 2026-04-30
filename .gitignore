@@ -17,3 +17,7 @@ desktop.ini
 # Local environment files
 .env
 .env.*
+
+# Node / Vite build artifacts
+node_modules/
+dist/

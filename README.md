@@ -1,26 +1,57 @@
-# Alluring Scents
+# Alluring Scents (React + Vite)
 
-Static marketing site for Alluring Scents.
+Modernized version of the Alluring Scents website, migrated from plain HTML/CSS/JS to React with Vite while preserving the original content, section order, and visual hierarchy.
 
-## Project Files
+## Run Locally
 
-- `index.html`: homepage and featured products
-- `products.html`: full fragrance catalogue
-- `order.html`: ordering, delivery, and FAQ page
-- `main.css`: shared styling across the site
-- `main.js`: shared interactions and filtering
-- `Assets/images`: logo, product imagery, and favicons
-- `Assets/video`: hero background video
-- `LAUNCH-CHECKLIST.md`: final pre-launch and hosting checks
+```bash
+npm install
+npm run dev
+```
 
-## Workspace Notes
+Then open the URL shown by Vite (usually `http://localhost:5173`).
 
-- The site is intentionally flat so it is easy to deploy as a static project.
-- Shared styles and behavior live in `main.css` and `main.js` to keep page files leaner.
-- Brand assets are grouped under `Assets/` so the root stays focused on the pages and shared files.
+## Project Structure
 
-## Before Publishing
+```text
+src/
+  components/
+    home/
+    layout/
+    order/
+    products/
+    shared/
+  data/
+  hooks/
+  pages/
+  styles/
+    appShell.module.css
+    legacy.css
+  App.jsx
+  main.jsx
+public/
+  Assets/
+```
 
-1. Open `index.html`, `products.html`, and `order.html` in a browser and do one final desktop and mobile check.
-2. Review `LAUNCH-CHECKLIST.md`.
-3. Deploy over HTTPS with the host-level security headers noted in the checklist.
+## Key Refactor Decisions
+
+- Migrated to **React functional components + hooks**.
+- Replaced multi-page HTML files with route-based pages:
+  - `/` (Home)
+  - `/products`
+  - `/order`
+- Preserved existing section flow, text content, and CTA hierarchy.
+- Replaced imperative DOM logic in `main.js` with hook-driven React behavior:
+  - Sticky nav + mobile menu toggle
+  - Hero video readiness/play handling
+  - Product filtering state
+  - FAQ accordion state
+  - Reveal-on-scroll animations
+- Kept visual parity by reusing the existing stylesheet as `src/styles/legacy.css`.
+- Added modular CSS (`appShell.module.css`) for React app shell scoping.
+- Kept image/video paths stable by serving original assets from `public/Assets`.
+
+## Notes
+
+- This refactor is intentionally conservative to preserve the existing brand presentation and UX.
+- Minor behavior improvements include route scroll reset and cleaner component reuse.

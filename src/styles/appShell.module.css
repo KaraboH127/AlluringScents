@@ -1,0 +1,7 @@
+.appShell {
+  min-height: 100dvh;
+}
+
+.mainContent {
+  display: block;
+}
