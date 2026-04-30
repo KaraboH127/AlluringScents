@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Vite configuration for a standard React single-page app.
+// Vite configuration for Netlify SPA deployment.
 export default defineConfig({
-  base: '/AlluringScents/',
+  // Netlify serves the app from the domain root, not a repo subpath.
+  base: '/',
   plugins: [react()]
 });
